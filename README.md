@@ -7,3 +7,5 @@ To start the timer:
 2. Click **Pause** to temporarily halt the timer.
 3. Click **Reset** to reset the timer back to the initial duration.
 4. Modify the work and break durations from the settings panel.
+5. There are a Work and Break Modes.
+6. Audio Notification when the timer ends.
