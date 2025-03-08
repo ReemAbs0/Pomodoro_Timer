@@ -1,95 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro Timer</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #be8284, rgb(153, 101, 86));
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            width: 500px;
-        }
-        h1 {
-            font-size: 26px;
-            margin-bottom: 20px;
-            color: white;
-        }
-        .timer {
-            font-size: 60px;
-            font-weight: bold;
-            margin: 20px 0;
-            color: white;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-        }
-        .controls button, .settings button {
-            padding: 12px 20px;
-            margin: 8px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .controls button {
-            background: #ff6b6b;
-            color: white;
-        }
-        .controls button:hover {
-            background: #ff4757;
-        }
-        .settings input {
-            width: 60px;
-            text-align: center;
-            padding: 5px;
-            margin: 5px;
-            border: 2px solid white;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            font-size: 16px;
-        }
-        .settings label {
-            color: white;
-            font-size: 14px;
-        }
-    </style>
-<script defer src="main.js"></script></head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script><link href="style.css" rel="stylesheet"></head>
+  <body>
     <div class="container">
-        <h1>Pomodoro Timer</h1>
-        
-        <div class="timer">
-            <span id="minutes">25</span>:<span id="seconds">00</span>
+      <h1>Pomodoro Timer</h1>
+
+      <div id="buttons">
+        <button id="work-button" style="background-color: white; color: black;">Work</button>
+        <button id="break-button">Break</button>
+      </div>
+      <div class="timer">
+        <span id="minutes">25</span>:<span id="seconds">00</span>
+      </div>
+
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <div class="settings">
+        <div id="SettDiv" style="display: flex">
+          <div id="Wlabel">
+            <label
+              >Duration (min):
+              <input type="number" id="work-duration" value="25"
+            /></label>
+          </div>
+          <div id="Blabel" style="display: none;">
+            <label
+              >Duration (min):
+              <input type="number" id="break-duration" value="5"
+            /></label>
+          </div>
+          <button id="apply-settings">Apply</button>
         </div>
-        
-        <div class="controls">
-            <button id="start">Start</button>
-            <button id="pause">Pause</button>
-            <button id="reset">Reset</button>
-        </div>
-        
-        <div class="settings">
-            <label>Work Duration (min): <input type="number" id="work-duration" value="25"></label>
-            <label>Break Duration (min): <input type="number" id="break-duration" value="5"></label>
-            <button id="apply-settings">Apply</button>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

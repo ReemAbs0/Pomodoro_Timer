@@ -1,12 +1,11 @@
-import _ from 'lodash';
+import { startTimer, pauseTimer, resetTimer, applySettings,toBreak,toWork } from './timer.js';
+import './styles.css'; 
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+document.addEventListener('DOMContentLoaded', () => {
+document.getElementById('start').addEventListener('click', startTimer);
+document.getElementById('pause').addEventListener('click', pauseTimer);
+document.getElementById('reset').addEventListener('click', resetTimer);
+document.getElementById('apply-settings').addEventListener('click', applySettings);
+document.getElementById('work-button').addEventListener('click',toWork); 
+document.getElementById('break-button').addEventListener('click', toBreak);
+});
